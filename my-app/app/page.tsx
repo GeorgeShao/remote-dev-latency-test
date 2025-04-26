@@ -65,29 +65,12 @@ function ApiResponse() {
 
       {data && (
         <>
-          <div className="mb-4 space-y-2">
-            <div className="border-b pb-2">
-              <span className="font-semibold">Total Time: </span>
-              <span className="text-red-600 dark:text-red-400 font-bold">
-                {timing.total?.toFixed(0)} ms
-              </span>
-            </div>
-            <div>
-              <span className="font-semibold">Client to Server: </span>
-              <span className="text-blue-600 dark:text-blue-400">
-                {timing.clientToServer?.toFixed(0)} ms
-              </span>
-            </div>
-            <div>
-              <span className="font-semibold">Server to Client: </span>
-              <span className="text-purple-600 dark:text-purple-400">
-                {timing.serverToClient?.toFixed(0)} ms
-              </span>
-            </div>
+          <div className="space-y-2">
+            <span className="font-semibold">Total Time: </span>
+            <span className="text-red-600 dark:text-red-400 font-bold">
+              {timing.total?.toFixed(0)} ms
+            </span>
           </div>
-          <pre className="bg-white dark:bg-gray-900 p-4 rounded overflow-auto">
-            {JSON.stringify(data, null, 2)}
-          </pre>
         </>
       )}
     </div>

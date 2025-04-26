@@ -20,9 +20,9 @@ app.get('/health', (req: Request, res: Response) => {
 
 // Basic API endpoint
 app.get('/api/hello', (req: Request, res: Response) => {
+  const startTime = Date.now();
   res.json({ 
-    message: 'Hello from the API!',
-    serverTime: Date.now()
+    responseTime: Date.now() - startTime
   });
 });
 
